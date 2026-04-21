@@ -53,3 +53,13 @@ OrganizatieStudenteasca* OrganizatieStudenteasca::citire(){
 void OrganizatieStudenteasca::adaugare(Student* s){
     membri[numarStudenti++]=s;
 }
+
+int OrganizatieStudenteasca::numarStudentiFacultate(const char* f) const{
+    int c=0;
+    for(int i=0;i<numarStudenti;i++){
+        if(strcmp(membri[i]->getFacultate(),f) == 0){
+            c++;
+        }
+    }
+    return c;
+}

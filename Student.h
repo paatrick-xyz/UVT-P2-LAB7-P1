@@ -11,6 +11,9 @@ public:
   ~Student();
   void afisare() const;
   static Student* citire();
+  char* getFacultate() const{
+      return facultate;
+  }
 };
 
 #endif

@@ -5,23 +5,25 @@
 
 using namespace std;
 
-int countMaxFacultate(OrganizatieStudenteasca** l, char f[], int nrc){
-    int c=0,cmax=0;
-    for(int i=0;i<nrc;i++){
-        c=0;
-        if(strcmp(l[i]->getFacultate(),f)==0){
-            c++;
+void afisareMaxFacultate(OrganizatieStudenteasca** l, int n, const char* facultateCeruta){
+    int* org = new int[n];
+    int maxVal = 0;
+    
+    for(int i=0;i<n;i++){
+        org[i]=l[i]->numarStudentiFacultate(facultateCeruta);
+        if(org[i]>maxVal){
+            maxVal=org[i];
         }
     }
-    for(int i=0;i<nrc;i++){
-        c=0
-        if(strcmp(l[i]->getFacultate(),f)==0)
-            cmax++;
-        if(cmax==c){
-            l[i]->afisare();
+    if(maxVal){
+        cout << "Nr max de studentii la " << facultateCeruta << " sunt in organizatiile:\n";
+        for(int i=0;i<n;i++){
+            if(org[i] == maxVal){
+                l[i]->afisare();
+            }
         }
     }
-    return cmax;
+    delete [] org;
 }
 
 
@@ -35,7 +37,10 @@ int main(){
         l[i]=OrganizatieStudenteasca::citire();
     }
     cin >> f;
-    
-    
+    afisareMaxFacultate(l,n,f);
+    for(int i=0;i<n;i++){
+        delete l[i];
+    }
+    delete [] l;
     return 0;
 }

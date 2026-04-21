@@ -15,9 +15,8 @@ public:
   void afisare() const;
   static OrganizatieStudenteasca* citire();
   void adaugare(Student*);
-  char* getFacultate() const{
-      return membri->facultate;
-  }
+  int numarStudentiFacultate(const char* f) const;
+  
 };
 
 #endif
