@@ -1,0 +1,38 @@
+---------INPUT---------
+3
+OSUT
+5
+3
+Marinescu 
+2
+FMI
+Mihaela 
+1
+CBG
+Violeta 
+3
+FMI
+ASEUT
+10
+2
+Ion 
+3
+ARTE
+Moromete 
+1
+FMI
+LIGA-AC
+7
+2
+Maria 
+1
+FMI
+Firulescu 
+2
+FMI
+
+
+---------OUTPUT---------
+Nr max de studentii la FMI sunt in organizatiile:
+OSUT [Marinescu Ion, an = 2, FMI; Mihaela Maria, an = 1, CBG; Violeta Varvara, an = 3, FMI; ]
+LIGA-AC [Maria Marioara, an = 1, FMI; Firulescu Vasile, an = 2. FMI; ]
